@@ -47,7 +47,7 @@ class WeatherFormat
 
         // modify date of minutely data
 
-        if ($res->minutely) {
+        if (isset($res->minutely)) {
             foreach ($res->minutely as $key => $val) {
                 $res->minutely[$key]->dt = $this->dt($val->dt, $tz);
             }
@@ -55,7 +55,7 @@ class WeatherFormat
 
         // modify date of hourly data
 
-        if ($res->hourly) {
+        if (isset($res->hourly)) {
             foreach ($res->hourly as $key => $val) {
                 $res->hourly[$key]->dt = $this->dt($val->dt, $tz);
             }
@@ -63,7 +63,7 @@ class WeatherFormat
 
         // modify date of daily data
 
-        if ($res->daily) {
+        if (isset($res->daily)) {
             foreach ($res->daily as $key => $val) {
                 $res->daily[$key]->dt = $this->dt($val->dt, $tz);
                 $res->daily[$key]->sunrise = $this->dt($val->sunrise, $tz);
