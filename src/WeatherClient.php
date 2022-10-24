@@ -27,7 +27,7 @@ class WeatherClient
      * @var string
      */
 
-    protected $url = 'https://api.openweathermap.org/data/2.5/';
+    protected $url = 'http://api.openweathermap.org/data/2.5/';
 
     /**
      * Geocoding API endpoint : http://api.openweathermap.org/geo/1.0/.
